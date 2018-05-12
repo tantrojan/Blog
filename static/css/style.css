@@ -1,0 +1,215 @@
+/*devoloped by tantrojan*/
+@import url('https://fonts.googleapis.com/css?family=Roboto|Lobster|Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Raleway|Slabo+27px|Merriweather');
+/*#################DEFAULT##################*/
+.no_margin {margin: 0;}
+html, body, header, footer {
+    display:block;
+    margin: 0;
+    width: 100%;
+    position:relative;
+    height: 100%;
+    background-color:aliceblue;
+    font-family: Raleway;
+}
+.container {
+    width: 100%;
+    margin: auto;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+.highlight {
+    background: red;
+    background: linear-gradient(45deg, white, #ccffff);
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.row::after {
+    display: table;
+    clear: both;
+    content: "";
+}
+.shift_right{position: relative;right: -20%;}
+
+.col-1 { width: 8.33%}
+.col-2 { width: 16.66%}
+.col-3 { width: 25%}
+.col-4 { width: 33.33%}
+.col-5 { width: 41.66%}
+.col-6 { width: 50%}
+.col-7 { width: 58.33%}
+.col-8 { width: 66.66%}
+.col-9 { width: 75%}
+.col-10 { width: 83.33%}
+.col-11{ width: 91.663%}
+.col-12{ width: 100%}
+
+.para {
+    font-family: Raleway ;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+/*################# NAV BAR ##################*/
+nav {
+    position: fixed;
+    width:100%;
+    box-shadow: 0px 4px 7px #777;
+}
+.navbar , .submenu>li{
+    line-height: 50px;
+    background-color:rgba(255, 255, 255,0.2);
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+}
+.submenu{
+    margin-top: 50px;
+    width:100%;
+}
+.navbar>ul , .submenu{
+    overflow: hidden;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.brand>img {
+    overflow: hidden;
+    padding-left: 15px; padding-top: 3px;
+    float:left;    
+    height:40px;
+}
+.brand>span {
+    overflow: hidden;
+    padding-top: 1px;
+    padding-left: 10px;
+    float: left;
+    font-family: Pacifico ,cursive;
+    font-size: 25px;
+}
+
+.navtags>a, .expand>a{
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+    float:right;
+    font-family: Lobster ,serif;
+    font-size: 20px;
+    text-decoration: none;
+    color:black;
+}
+.submenu>li>a{
+    text-align: center;
+    font-family: Lobster ,serif;
+    font-size: 20px;
+    text-decoration: none;
+    color:black;
+}
+.expand{
+    display: none;
+}
+.navtags>a:hover, .expand>a:hover ,.submenu>li:hover{
+    text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+    color: black;
+    font-size: 22px;
+    background-color: aquamarine;
+}
+
+/*##### Mobile Nav-bar #####*/
+
+@media all and (max-width:500px){
+    .expand{
+        display: block;
+    }
+    .navtags {
+        display: none;
+    }
+}
+
+/*####### PARALLAX EFFECT ########*/
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    display: block;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    width:100%;
+    min-height: 100%;
+}
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url('../assets/facepic.JPG');
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url("assets/2%20(380).JPG");
+    min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("assets/w3images/parallax3.jpg");
+    min-height: 400px;
+}
+/*####### ICONS ########*/
+
+.icon_holder {
+    padding-top: 10%;
+}
+.icon {
+    vertical-align: middle;
+    width: 100%;
+}
+@media all and (max-width:500px){
+    .icon_holder {
+        padding-top: 40%;
+    } 
+    .col-10{ width: 50%;}
+    .col-2{ width: 50%;}
+}
+/*####### ABOUT SECTION ########*/
+
+h1.center_header {
+    text-align: center;
+    font-family: Merriweather;
+}
+
+/*####### SUGGESTION BOX ########*/
+
+input[type="text"], button{
+    font-size: 12px;
+    font font-family: Raleway;
+    min-width:50%;
+    padding:5px;
+    border-radius: 7px;
+    margin-bottom: 15px;
+}
+
+textarea {
+    font-size: 12px;
+    font font-family: Raleway;
+    padding:5px;
+    width: 60%;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    resize: none;
+    height: 100px;
+}
+
+#sug_bog{
+    display: block;
+}
+
+@media all and (max-width:500px){
+    .col-6{ width: 100%; }
+    #sug_box{display: none; }
+    textarea{width: 100%;}  
+    .shift_right{position:inherit;right:none;}
+}
