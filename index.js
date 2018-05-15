@@ -1,4 +1,8 @@
 const express = require("express");
+const mongoose= require("mongoose");
+
+mongoose.connect("mongodb://localhost/blog")
+
 const app = express();
 
 app.use(express.static("static"));
