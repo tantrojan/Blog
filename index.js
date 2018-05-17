@@ -17,6 +17,7 @@ app.use(express.static("static"));
 
 //ROUTING
 app.use("/",require("./routes/home"));
+app.use("/suggestions",require("./routes/suggest"));
 
 app.listen(3000,(req,res)=>{
 	console.log("Listening to port 3000");
