@@ -1,13 +1,19 @@
 const express = require("express");
-const mongoose= require("mongoose");
-
-mongoose.connect("mongodb://localhost/blog")
-
 const app = express();
+const bodyParser = require("body-parser");
 
+//BODYPARSER
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+
+//STATIC FILES
 app.use(express.static("static"));
-app.get("/",require("./routes/home"));
 
-app.listen(3000,function(){
+//ROUTING
+app.use("/",require("./routes/home"));
+
+app.listen(3000,(req,res)=>{
 	console.log("Listening to port 3000");
 });
+
+console.log("Evrything is working fine ");

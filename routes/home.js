@@ -1,12 +1,14 @@
 const express = require("express");
-const mongoose = require("mongoose");
-
-var Suggestion = require("../models/suggestion");
-
 const router = express.Router();
 
-router.get("/",function(req,res){
-	res.sendFile(__dirname + "/home.html");
+router.get("/",(req,res)=>{
+	res.render("home.ejs", { qs: req.query });
 });
 
-module.exports = router;
+router.post("/",(req,res)=>{
+	console.log(req.body);
+	res.render("home.ejs");
+})
+
+module.exports = router; 
+
