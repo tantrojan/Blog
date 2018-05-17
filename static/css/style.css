@@ -203,6 +203,24 @@ textarea {
     height: 100px;
 }
 
+.footer {
+    width: 100%;
+    margin: auto;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+    color :white;
+    background: linear-gradient(to top left, #417f7c 0%, #252d2d 82%);
+       -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow:         inset 0 0 10px #000000;
+}
+
+.footer_text{
+    text-align: center;
+    font-family: pacifico;
+    font-size: 1.2em;
+}
+
 #sug_bog{
     display: block;
 }

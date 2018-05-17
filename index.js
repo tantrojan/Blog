@@ -1,6 +1,12 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+
+//DATA CONNECTION
+var DB = "mongodb://localhost/Blog";
+mongoose.connect(DB);
+
 
 //BODYPARSER
 app.use(bodyParser.json());
