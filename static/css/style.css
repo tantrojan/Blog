@@ -79,12 +79,14 @@ nav {
     margin: 0;
 }
 .brand>img {
+    pointer-events: none;
     overflow: hidden;
     padding-left: 15px; padding-top: 3px;
     float:left;    
     height:40px;
 }
 .brand>span {
+    pointer-events: none;
     overflow: hidden;
     padding-top: 1px;
     padding-left: 10px;
@@ -144,7 +146,7 @@ nav {
 }
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: url('../assets/facepic.JPG');
+    background-image: url('../assets/wall1.JPG');
 }
 
 /* Second image (Portfolio) */
@@ -166,7 +168,14 @@ nav {
 .icon {
     vertical-align: middle;
     width: 100%;
+    transition: transform 1s; 
 }
+
+.icon:hover{
+    transform:scale(1.2 );
+
+}
+
 @media all and (max-width:500px){
     .icon_holder {
         padding-top: 40%;
@@ -212,6 +221,7 @@ textarea {
 }
 
 .footer {
+    pointer-events: none;
     width: 100%;
     margin: auto;
     padding-top: 0.2%;
@@ -224,6 +234,7 @@ textarea {
 }
 
 .footer_text{
+    pointer-events: none;
     text-align: center;
     font-family: pacifico;
     font-size: 1.2em;
